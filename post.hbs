@@ -1,7 +1,7 @@
 {{!< default}}
 
 {{#post}}
-<article class="post-content {{post_class}} {{#unless feature_image}}no-image{{/unless}}">
+<article class="post-content {{post_class}} {{^has tag="#image"}}no-image{{/has}}">
 
     <header class="post-content-header">
         <h1 class="post-content-title">{{title}}</h1>
@@ -12,10 +12,12 @@
     {{/if}}
 
     {{#if feature_image}}
-    <div class="post-content-image">
-        <img class="kg-image" src="{{feature_image}}" alt="{{title}}" />
-    </div>
-    {{/if}}
+		{{#has tag="#image"}}
+			<div class="post-content-image">
+				<img class="kg-image" src="{{feature_image}}" alt="{{title}}" />
+			</div>
+		{{/has}}
+	{{/if}}
 
     <div class="post-content-body">
         {{content}}

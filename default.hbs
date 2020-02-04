@@ -35,22 +35,23 @@
                     {{navigation}}
                 </nav>
                 <div class="site-head-center">
-                    {{#if @site.logo}}
-                    <a class="site-head-logo" href="{{@site.url}}"><img src="{{@site.logo}}" alt="{{@site.title}}" /></a>
-                    {{else}}
-                    <a class="site-head-logo" href="{{@site.url}}">{{@site.title}}</a>
-                    {{/if}}
+					<a class="site-head-logo" href="{{@site.url}}">{{@site.title}}</a>
                 </div>
                 <div class="site-head-right">
+					{{#if @site.logo}}
+						<a class="site-head-logo" href="{{@site.url}}"><img src="{{@site.logo}}" alt="{{@site.title}}" /></a>
+					{{/if}}
+				{{!--
                     <div class="social-links">
                         {{#if @site.facebook}}
                         <a href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="noopener">Facebook</a>
                         {{/if}}
                         {{#if @site.twitter}}
                         <a href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="noopener">Twitter</a>
-                        {{/if}}
-                        <a href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" title="RSS" target="_blank" rel="noopener">RSS</a>
+                        {{/if}}                        
+						<a href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" title="RSS" target="_blank" rel="noopener">RSS</a>						
                     </div>
+					--}}
                 </div>
             </div>
         </header>
